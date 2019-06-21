@@ -958,8 +958,8 @@ def main():
       os.system("iptables -F")
       print " [+] Active queues removed"
       print " [+] Exiting OSfooler..."
-      #for p in multiprocessing.active_children():
-      #  p.terminate()
+      for p in multiprocessing.active_children():
+        p.terminate()
 
 if __name__ == "__main__":
   main()
